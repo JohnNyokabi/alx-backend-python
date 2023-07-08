@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """add type annotations to the function"""
-from typing import TypeVar, Dict, Optional
+from typing import Mapping, Any, Union, TypeVar
 
-K = TypeVar('K')
-V = TypeVar('V')
+T = TypeVar('T')
 
 
-def safely_get_value(dct: Dict[K, V], key: K, default: Optional[V] = None) -> Optional[V]:
+def safely_get_value(dct: Mapping, key: Any, default: Union[T, None] = None) -> Union[Any, T]:
     if key in dct:
         return dct[key]
     else:

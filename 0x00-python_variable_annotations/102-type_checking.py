@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-from typing import Tuple, List, Any
+from typing import Tuple, List
 
 
-def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
+def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> Tuple[int, ...]:
     """zoom-in logic"""
-    zoomed_in: List[Any] = [
+    zoomed_in: Tuple[int, ...] = tuple(
         item for item in lst
-        for _ in range(factor)
-    ]
-    return tuple(zoomed_in)
+        for i in range(factor)
+    )
+    return zoomed_in
 
 
 """change array from list to tuple"""

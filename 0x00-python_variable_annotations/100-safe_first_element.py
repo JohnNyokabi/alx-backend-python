@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Duck-typed annotations"""
-from typing import Any, Optional
+from typing import Sequence, Any, Optional
 
 
-def safe_first_element(lst: list) -> Optional[Any]:
+def safe_first_element(lst: Sequence[Any]) -> Optional[Any]:
     """annotations logic"""
     if lst:
         return lst[0]
