@@ -3,8 +3,8 @@
 from typing import Tuple, List
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> Tuple[int, ...]:
-    """zoom-in logic"""
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """zoom-in logic for the type annonationi"""
     zoomed_in: Tuple[int, ...] = tuple(
         item for item in lst
         for i in range(factor)
