@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Adding type annotations to the function"""
 from typing import Tuple, List
 
 
